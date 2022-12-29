@@ -2,6 +2,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 TPO.access_tpo_property,access_tpo_property,TPO.model_tpo_property,base.group_user,1,1,1,1
 TPO.access_student_placement,access_student_placement,TPO.model_student_placement,base.group_user,1,1,1,1
 TPO.access_teacher_placement,access_teacher_placement,TPO.model_teacher_placement,base.group_user,1,1,1,1
-TPO.access_application_student,access_application_student,TPO.model_application_student,base.group_user,1,1,1,1
+TPO.access_student_student,access_student_student,TPO.model_student_student,base.group_user,1,1,1,1
 TPO.access_resume_student,access_resume_student,TPO.model_resume_student,base.group_user,1,1,1,1
 TPO.access_details_company,access_details_company,TPO.model_details_company,base.group_user,1,1,1,1
+TPO.access_apply_application,access_apply_application,TPO.model_apply_application,base.group_user,1,1,1,1

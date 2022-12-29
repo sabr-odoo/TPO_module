@@ -5,18 +5,27 @@
 
         <menuitem id="menu_root" name="TPO">
             <!-- First Placement Menu-->
-            <menuitem id="Placement_first_level_menu" name="Placement" >
-                <menuitem id="teacher_model_menu_action" action="Create_teacher_Under_placement_menu" />
-                <menuitem id="student_model_menu_action" action="Create_student_Under_placement_menu" />
+            <menuitem id="Placement_first_level_menu" name="Placement">
+                <menuitem id="teacher_model_menu_action"
+                    action="Create_teacher_Under_placement_menu" />
+                <menuitem id="student_model_menu_action"
+                    action="Create_student_Under_placement_menu" />
             </menuitem>
-            <!-- Second Student Menu-->            
-            <menuitem id="Student_first_level_menu" name="Student" >
-                <menuitem id="application_model_menu_action" action="Create_Application_Under_student_menu" />
-                <menuitem id="resume_model_menu_action" action="Create_resume_Under_student_menu" />
+            <!-- Second Student Menu-->
+            <menuitem id="Student_first_level_menu" name="Student">
+                <menuitem id="application_model_menu_action"
+                    action="Create_Application_Under_student_menu" />
+                <!-- <menuitem id="resume_model_menu_action"
+                action="Create_resume_Under_student_menu" /> -->
             </menuitem>
-             <!-- Third Company Menu-->
-            <menuitem id="company_first_level_menu" name="Company" >
+            <!-- Third Company Menu-->
+            <menuitem id="company_first_level_menu" name="Company">
                 <menuitem id="form_model_menu_action" action="Create_deatils_Under_Company_menu" />
+               
+            </menuitem>
+            <!--  four Apply Application Menu-->
+            <menuitem id="apply_application_first_level_menu" name="Apply" >
+                 <menuitem id="apply_application_form_model_menu_action" action="Create_apply_application_Under_apply_menu" />
             </menuitem>
         </menuitem>
     </data>

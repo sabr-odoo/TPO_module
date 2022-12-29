@@ -2,3 +2,21 @@ link-> https://www.freeprojectz.com/uml-diagram/placement-cell-management-system
 student -> resume ,fillup deatils 
 
 teaacher  -> arraange meeting and  
+
+
+demo :- 
+ <!-- <field name="dist"></field> -->
+ <!-- <field name="hsc"></field> -->
+ <!-- <field name="intership"></field>
+            <field name="project"></field> -->
+            <!-- <field name="description"></field>
+            <field name="teacher_placement_id"></field> -->
+
+file: -apply_application : -    company name
+                                student name
+                                student id
+                                techer name or coordi
+                                add somethin 
+                                profile applices 
+                                branch 
+                               

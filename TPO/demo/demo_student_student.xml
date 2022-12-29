@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="student.student" id="demo_data_student_student">
+            <field name="name">Brahmbhatt Sanket</field>
+            <field name="Student_id">D20DIT093</field>
+            <!-- <field name="DOB"></field> -->
+            <field name="age">22</field>
+            <field name="number">123456789</field>
+            <field name="email">s@odoo.com</field>
+            <field name="address">Gotri Village</field>
+            <field name="city">vadodara</field>
+            <field name="state">Gujarat</field>
+            <field name="pincode">390021</field>
+            <field name="branch">Information Technology</field>
+            <field name="Career_option">placement</field>
+            <field name="passing_year">pass_2023</field>
+            <field name="ssc">70</field>
+            <field name="cgpa">9</field>
+            <field name="n_backlog">0</field>
+            <field name="objective">To get an opportunity that allows me to showcase my skills and contribute to the company's growth.</field>
+            <field name="linkedin">sa@linkedin.com</field>
+            <field name="github">sa-doo</field>
+            <field name="skill">Computer proficiency,Communication skills,Organizational know-how</field>
+            <field name="technical_skill">Data Structures,Web Development,Coding</field>
+            <field name="onesem">9</field>
+            <field name="secondsem">9</field>
+            <field name="thirdsem">7</field>
+            <field name="foursem">8</field>
+            <field name="fivesem">8</field>
+            <field name="sixsem">9</field>
+            
+        </record>
+    </data>
+</odoo>
