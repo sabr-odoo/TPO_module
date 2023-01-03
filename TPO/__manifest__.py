@@ -13,7 +13,7 @@
     'installable': True,
     'license': 'LGPL-3',
     'demo': [
-    #    'demo/demo_student_student.xml',
-    #    'demo/demo_details_compnay.xml',
+       'demo/demo_student_student.xml',
+       'demo/demo_details_compnay.xml',
     ],
 }

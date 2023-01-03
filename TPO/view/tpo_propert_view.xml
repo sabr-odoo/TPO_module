@@ -299,11 +299,11 @@
             <field name="model">apply.application</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="c_name" />
+                    <field name="name" />
                     <field name="s_name" />
                     <field name="s_id" />
                     <field name="te_name" />
-                    <field name="add_some" />
+                    <field name="add_some" optional='hide' />
                     <field name="select_apply" />
                 </tree>
             </field>
@@ -317,12 +317,10 @@
                     <sheet>
                         <group>
                             <group>
-                                <label for="c_name" string="Company Name"></label>
-                                <field name="c_name" nolabel="1" />
+                                <label for="name" string="Company Name"></label>
+                                <field name="name" nolabel="1" />
                                 <label for="s_name" string="Student Name"></label>
                                 <field name="s_name" nolabel="1" />
-                                <label for="s_id" string="Student ID"></label>
-                                <field name="s_id" nolabel="1" />
                             </group>
                             <group>
                                 <label for="te_name" string="Teacher Coordinator"></label>
@@ -337,6 +335,5 @@
                 </form>
             </field>
         </record>
-
     </data>
 </odoo>
