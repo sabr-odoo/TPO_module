@@ -6,3 +6,4 @@ TPO.access_student_student,access_student_student,TPO.model_student_student,base
 TPO.access_resume_student,access_resume_student,TPO.model_resume_student,base.group_user,1,1,1,1
 TPO.access_details_company,access_details_company,TPO.model_details_company,base.group_user,1,1,1,1
 TPO.access_apply_application,access_apply_application,TPO.model_apply_application,base.group_user,1,1,1,1
+TPO.access_technical_skills,access_technical_skills,TPO.model_technical_skills,base.group_user,1,1,1,1

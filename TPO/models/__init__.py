@@ -7,3 +7,4 @@ from . import student_student
 from . import resume_student
 from . import details_company
 from . import apply_application
+from . import technical_skills

@@ -3,7 +3,7 @@
 <odoo>
     <data>
 
-        <menuitem id="menu_root" name="TPO">
+        <menuitem id="menu_root" name="TPO" web_icon="TPO,static/description/images.jpeg">
             <!-- First Placement Menu-->
             <menuitem id="Placement_first_level_menu" name="Placement">
                 <menuitem id="teacher_model_menu_action"
@@ -21,11 +21,15 @@
             <!-- Third Company Menu-->
             <menuitem id="company_first_level_menu" name="Company">
                 <menuitem id="form_model_menu_action" action="Create_deatils_Under_Company_menu" />
-               
+                <menuitem id="technical_skill_form_model_menu_action"
+                    action="Create_technical_skills_model_action" />
+
             </menuitem>
             <!--  four Apply Application Menu-->
-            <menuitem id="apply_application_first_level_menu" name="Apply" >
-                 <menuitem id="apply_application_form_model_menu_action" action="Create_apply_application_Under_apply_menu" />
+            <menuitem id="apply_application_first_level_menu" name="Apply">
+                <menuitem id="apply_application_form_model_menu_action"
+                    action="Create_apply_application_Under_apply_menu" />
+
             </menuitem>
         </menuitem>
     </data>

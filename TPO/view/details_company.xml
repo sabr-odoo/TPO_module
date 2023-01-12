@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <!-- Company Deatils  Menu under Company -->
+        <record id="Create_deatils_Under_Company_menu" model="ir.actions.act_window">
+            <field name="name">Company Deatils</field>
+            <field name="res_model">details.company</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="company_deatils_form_view" model="ir.ui.view">
+            <field name="name">Company form view</field>
+            <field name="model">details.company</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" optional='hide' />
+                    <field name="deapartment" />
+                    <field name="stipend" optional='hide' />
+                    <field name="website" optional='hide' />
+                    <field name="working_mode" optional='hide' />
+                    <field name="bond" optional='hide' />
+                    <field name="package" />
+                    <field name="country_id" />
+                    <field name="experience" optional='hide' />
+                    <field name="address" optional='hide' />
+                    <field name="position" />
+                    <field name="langauge" optional='hide' widget="many2many_tags"
+                        options="{'color_field': 'color'}" />
+                    <field name="process" optional='hide' />
+                    <field name="date_joining" optional='hide' />
+                </tree>
+            </field>
+        </record>
+
+        <record id="form_design_view_company_form" model="ir.ui.view">
+            <field name="name">Company form</field>
+            <field name="model">details.company</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <label for="name" string="Company Name"></label>
+                                <field name="name" nolabel="1" />
+                                <label for="date_joining" string="Joining Date"></label>
+                                <field name="date_joining" nolabel="1" />
+                                <label for="working_mode" string="Work Mode"></label>
+                                <field name="working_mode" nolabel="1" />
+                                <label for="experience" string="Experience"></label>
+                                <field name="experience" nolabel="1" />
+                                <label for="position" string="Position"></label>
+                                <field name="position" nolabel="1" />
+                                <label for="langauge" string="Langauge"></label>
+                                <field name="langauge" nolabel="1" widget="many2many_tags"
+                                    options="{'color_field': 'color'}" />
+                            </group>
+                            <group>
+                                <label for="deapartment" string="Branch Name"></label>
+                                <field name="deapartment" nolabel="1" />
+                                <label for="website" string="Company Website"></label>
+                                <field name="website" nolabel="1" />
+                                <label for="package" string="CTC"></label>
+                                <field name="package" nolabel="1" />
+                                <label for="address" string="Job Location"></label>
+                                <field name="address" nolabel="1" />
+                                <label for="process" string="Selection Process"></label>
+                                <field name="process" nolabel="1" />
+                                <label for="country_id" string="Country List"></label>
+                                <field name="country_id" nolabel="1" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string=" More Details">
+                                <field name="description"
+                                    placeholder="More Description Regarding Company"></field>
+                            </page>
+                            <page string="Student List">
+                                <field name="student_select">
+                                    <tree decoration-success="status == 'selected'"
+                                        decoration-danger="status=='not_selected'">
+                                        <field name="c_name_id" />
+                                        <field name="s_name_id" />
+                                        <!-- <button name="action_accept" type="object"
+                                        string="Accept"
+                                        icon="fa-check"></button> -->
+                                        <!-- <button name="action_refuse" type="object"
+                                        string="Refuse"
+                                            icon="fa-times"></button> -->
+                                        <button name="action_selected" type="object"
+                                            string="SELECTED"
+                                            icon="fa-smile-o"></button>
+                                        <button name="action_not_selected" type="object"
+                                            string="NOT SELECTED"
+                                            icon="fa-frown-o"></button>
+
+                                        <field name="status">
+
+                                        </field>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Send Message">
+                                <input type="text" id="fname" name="fname"
+                                    style="height:100px;width:1000px;margin-left:11px"
+                                    placeholder="Send Message"></input>
+                                <button type="submit" name="send" value="Submit" style="margin:46px">
+                                    SEND</button>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="message_ids" />
+                    <field name="activity_ids" />
+                </div>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

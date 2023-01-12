@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="Create_technical_skills_model_action" model="ir.actions.act_window">
+            <field name="name">Property Tag</field>
+            <field name="res_model">technical.skills</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="view_tree_technical_skills_tag" model="ir.ui.view">
+            <field name="name"> Form View</field>
+            <field name="model">technical.skills</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name" />
+                    <field name="com_languageid" />
+                    <field name="color" widget="color_picker"/>
+                    <field name="color_2" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_tree_technical_skills_tag" model="ir.ui.view">
+            <field name="name">Real Estate tag Form View</field>
+            <field name="model">technical.skills</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="name" />
+                    <field name="com_languageid" />
+                    <field name="color" widget="color_picker"/>
+                    <field name="color_2" />
+            </form>
+            </field>
+        </record>
+    </data>
+</odoo>

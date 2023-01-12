@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <!-- application Form  Menu under student -->
+        <record id="Create_Application_Under_student_menu" model="ir.actions.act_window">
+            <field name="name">Application Form</field>
+            <field name="res_model">student.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="application_view_design_form" model="ir.ui.view">
+            <field name="name">application Form View</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="Student_id" />
+                    <field name="DOB" optional='hide' />
+                    <field name="age" optional='hide' />
+                    <field name="number" optional='hide' />
+                    <field name="email" optional='hide'/>
+                    <field name="address" optional='hide' />
+                    <field name="city" optional='hide' />
+                    <field name="dist" optional='hide' />
+                    <field name="state" optional='hide' />
+                    <field name="pincode" optional='hide' />
+                    <field name="branch" />
+                    <field name="Career_option" />
+                    <field name="passing_year" optional='hide' />
+                    <field name="ssc" optional='hide' />
+                    <field name="hsc" optional='hide' />
+                    <field name="cgpa" optional='hide' />
+                    <field name="n_backlog" optional='hide' />
+                    <field name="objective" optional='hide' />
+                    <field name="linkedin" optional='hide' />
+                    <field name="github" optional='hide' />
+                    <field name="skill" optional='hide' />
+                    <field name="technical_skill" widget="many2many_tags" options="{'color_field': 'color'}" />
+                    <field name="intership" optional='hide' />
+                    <field name="project" optional='hide' />
+                    <field name="onesem" optional='hide' />
+                    <field name="secondsem" optional='hide' />
+                    <field name="thirdsem" optional='hide' />
+                    <field name="foursem" optional='hide' />
+                    <field name="fivesem" optional='hide' />
+                    <field name="sixsem" optional='hide' />
+                    <field name="description" optional='hide' />
+                    <field name="teacher_placement_id" />
+                    <field name="apply_company" />
+                    <field name="company_placement_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="form_design_view_applcation_form" model="ir.ui.view">
+            <field name="name">Design form</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar" options="{'clickable':'1'}" />
+                    </header>
+                    <sheet>
+                        
+                        <group>
+                            <group>
+                                <label for="name" string="Student Name"></label>
+                                <field name="name" nolabel="1" />
+                                <label for="Student_id" string="Student ID"></label>
+                                <field name="Student_id" nolabel="1" />
+                                <label for="email" string="Email-ID"></label>
+                                <field name="email" nolabel="1" />
+                                <label for="address" string="Address"></label>
+                                <field name="address" nolabel="1" />
+                                <label for="dist" string="Dist"></label>
+                                <field name="dist" nolabel="1" />
+                                <label for="pincode" string="Pincode"></label>
+                                <field name="pincode" nolabel="1" />
+                                <label for="teacher_placement_id" string="Teacher Coordinator"></label>
+                                <field name="teacher_placement_id" nolabel="1" />
+
+                            </group>
+                            <group>
+                                <label for="DOB" string="DOB"></label>
+                                <field name="DOB" nolabel="1" />
+                                <label for="age" string="Age"></label>
+                                <field name="age" nolabel="1" />
+                                <label for="number" string="Mobile No"></label>
+                                <field name="number" nolabel="1" />
+                                <label for="city" string="City"></label>
+                                <field name="city" nolabel="1" />
+                                <label for="state" string="State"></label>
+                                <field name="state" nolabel="1" />
+                                <label for="branch" string="Branch"></label>
+                                <field name="branch" nolabel="1" />
+                                <label for="company_placement_id" string="Select Company"></label>
+                                <field name="company_placement_id" nolabel="1" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Career">
+                                <group>
+                                    <group>
+                                        <label for="Career_option" string="Career Option"></label>
+                                        <field name="Career_option" nolabel="1" />
+                                    </group>
+                                    <group>
+                                        <label for="passing_year" string="Passing Year"></label>
+                                        <field name="passing_year" nolabel="1" />
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Resume"  attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
+                                <group>
+                                    <group>
+                                        <label for="linkedin" string="Linkedin ID"></label>
+                                        <field name="linkedin" nolabel="1" />
+                                        <label for="objective" string="Objective"></label>
+                                        <field name="objective" nolabel="1" />
+                                        <label for="skill" string="SkillS"></label>
+                                        <field name="skill" nolabel="1" />
+                                        <label for="intership" string="Intership Details"></label>
+                                        <field name="intership" nolabel="1" />
+                                    </group>
+                                    <group>
+                                        <label for="github" string="Github Link"></label>
+                                        <field name="github" nolabel="1" />
+                                        <label for="technical_skill" string="Technical SkillS"></label>
+                                        <field name="technical_skill" nolabel="1" widget="many2many_tags"
+                                    options="{'color_field': 'color'}" />
+                                        <label for="project" string="Project"></label>
+                                        <field name="project" nolabel="1" />
+                                        <label for="ssc" string="S.S.C"></label>
+                                        <field name="ssc" nolabel="1" />
+                                        <label for="hsc" string="H.S.C"></label>
+                                        <field name="hsc" nolabel="1" />
+                                    </group>
+                                </group>
+                                <group string="Sem">
+                                    <group>
+                                        <label for="onesem" string="1st Sem SGPA"></label>
+                                        <field name="onesem" nolabel="1" />
+                                        <label for="secondsem" string="2nd Sem SGPA"></label>
+                                        <field name="secondsem" nolabel="1" />
+                                        <label for="thirdsem" string="3rd Sem SGPA"></label>
+                                        <field name="thirdsem" nolabel="1" />
+                                        <label for="n_backlog" string="No BackLog"></label>
+                                        <field name="n_backlog" nolabel="1" />
+                                    </group>
+                                    <group>
+                                        <label for="foursem" string="4th Sem SGPA"></label>
+                                        <field name="foursem" nolabel="1" />
+                                        <label for="fivesem" string="5th Sem SGPA"></label>
+                                        <field name="fivesem" nolabel="1" />
+                                        <label for="sixsem" string="6th Sem SGPA"></label>
+                                        <field name="sixsem" nolabel="1" />
+                                        <label for="cgpa" string="CGPA"></label>
+                                        <field name="cgpa" nolabel="1" />
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Other Activites Add"  attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
+                                <field name="description"
+                                    placeholder="More Activites Details"></field>
+                            </page>
+                            <page string="Apply"  attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
+                                <field name="apply_company">
+                                    <tree>
+                                        <field name="c_name_id" />
+                                        <field name="s_name_id" />
+                                        <field name="status" />
+                                    </tree>
+                                    </field>
+                            </page>
+                        </notebook>
+                        <notebook>
+                            <page string="Send Message">
+                                <input type="text" id="fname" name="fname"
+                                    style="height:100px;width:1000px;margin-left:11px"
+                                    placeholder="Send Message"></input>
+                                <button type="submit" name="send" value="Submit" style="margin:46px">
+                                    SEND</button>
+                            </page>
+                            <page string="Log Note">
+                                <hr></hr>
+                                <p></p>
+                            </page>
+                            <page string="Archive">
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="message_ids" />
+                    <field name="activity_ids" />
+                </div>
+            </field>
+        </record>
+
+        <record id="student_student__search" model="ir.ui.view">
+            <field name="name">student.student.search</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <search string="demo">
+                     <field name="name" string="Name" />
+                     <filter name="name_of_the_filter" string="Placement Student"
+                        domain="[('Career_option', '=', 'placement')]" />
+                      <filter name="name_of_the_filter" string="Higher Education Student"
+                        domain="[('Career_option', '=', 'higher_education')]" />
+                         <filter string="S.S.C Above 75" name="ssc"
+                        domain="[('ssc', '>=', '75')]" />
+                        <filter string="Backlog Student" name="n_backlog"
+                        domain="[('n_backlog', '>', '0')]" />
+                </search>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
