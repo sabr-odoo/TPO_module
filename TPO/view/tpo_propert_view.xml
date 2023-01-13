@@ -16,6 +16,8 @@
                     <!--  <field name="student_nameid"/>  -->
                     <field name="offeres_ids" />
                     <field name="student_count" />
+                    <field name="from_date" />
+                    <field name="subject_name" />
                     <!-- <field name="company_ids"/>
                     <field
                     name="company_count"/> -->
@@ -57,6 +59,18 @@
                                         <field name="Career_option" />
                                     </tree>
                                 </field>
+                            </page>
+                            <page string="Session Time">
+                                <group>
+                                    <group>
+                                        <label for="from_date" string="Time"></label>
+                                        <field name="from_date" nolabel="1" />
+                                    </group>
+                                    <group>
+                                        <label for="subject_name" string="Subject Name"></label>
+                                        <field name="subject_name" nolabel="1"/>
+                                    </group>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>

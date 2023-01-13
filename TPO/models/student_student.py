@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError,UserError
 
 
 class StudentStudent(models.Model):
@@ -28,7 +29,8 @@ class StudentStudent(models.Model):
                    ('computer', 'Computer'), ('mechanical', 'Mechanical')]
     )
     state = fields.Selection(
-        selection=[('new', 'New'), ('confirm', 'Confirm'), ('cancel', 'Cancel')], default="new"
+        selection=[('new', 'New'), ('selected', 'SELECTED'), ('on_process', 'On Process'), ('not_selected', 'NOT SELECTED')], default="new"
+        
     )
     Career_option = fields.Selection(
         selection=[('placement', 'Placement'), ('higher_education', 'Higher Education'),
@@ -71,3 +73,9 @@ class StudentStudent(models.Model):
     #   for record in self:
     #     if record.Career_option == 'placement':
     #         return record.apply_company
+
+    # @api.depends()
+    # def compute_header_status(self):
+    #     for record in self:
+    #         if record.apply_company.status == 'selected':
+    #             record.states = 'selected'

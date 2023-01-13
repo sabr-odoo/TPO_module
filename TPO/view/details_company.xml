@@ -82,21 +82,15 @@
                                         decoration-danger="status=='not_selected'">
                                         <field name="c_name_id" />
                                         <field name="s_name_id" />
-                                        <!-- <button name="action_accept" type="object"
-                                        string="Accept"
-                                        icon="fa-check"></button> -->
-                                        <!-- <button name="action_refuse" type="object"
-                                        string="Refuse"
-                                            icon="fa-times"></button> -->
                                         <button name="action_selected" type="object"
                                             string="SELECTED"
                                             icon="fa-smile-o"></button>
                                         <button name="action_not_selected" type="object"
                                             string="NOT SELECTED"
                                             icon="fa-frown-o"></button>
-
+                                        <button name="action_process" type="object"
+                                            string="On Process" icon="fa-spinner" />
                                         <field name="status">
-
                                         </field>
                                     </tree>
                                 </field>

@@ -3,7 +3,7 @@
 <odoo>
     <data>
 
-        <menuitem id="menu_root" name="TPO" web_icon="TPO,static/description/images.jpeg">
+        <menuitem id="menu_root" name="TPO" web_icon="TPO,static/description/icon.png">
             <!-- First Placement Menu-->
             <menuitem id="Placement_first_level_menu" name="Placement">
                 <menuitem id="teacher_model_menu_action"

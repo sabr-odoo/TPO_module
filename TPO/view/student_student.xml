@@ -18,7 +18,7 @@
                     <field name="DOB" optional='hide' />
                     <field name="age" optional='hide' />
                     <field name="number" optional='hide' />
-                    <field name="email" optional='hide'/>
+                    <field name="email" optional='hide' />
                     <field name="address" optional='hide' />
                     <field name="city" optional='hide' />
                     <field name="dist" optional='hide' />
@@ -35,7 +35,8 @@
                     <field name="linkedin" optional='hide' />
                     <field name="github" optional='hide' />
                     <field name="skill" optional='hide' />
-                    <field name="technical_skill" widget="many2many_tags" options="{'color_field': 'color'}" />
+                    <field name="technical_skill" widget="many2many_tags"
+                        options="{'color_field': 'color'}" />
                     <field name="intership" optional='hide' />
                     <field name="project" optional='hide' />
                     <field name="onesem" optional='hide' />
@@ -61,7 +62,7 @@
                         <field name="state" widget="statusbar" options="{'clickable':'1'}" />
                     </header>
                     <sheet>
-                        
+
                         <group>
                             <group>
                                 <label for="name" string="Student Name"></label>
@@ -110,7 +111,8 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Resume"  attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
+                            <page string="Resume"
+                                attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
                                 <group>
                                     <group>
                                         <label for="linkedin" string="Linkedin ID"></label>
@@ -126,8 +128,9 @@
                                         <label for="github" string="Github Link"></label>
                                         <field name="github" nolabel="1" />
                                         <label for="technical_skill" string="Technical SkillS"></label>
-                                        <field name="technical_skill" nolabel="1" widget="many2many_tags"
-                                    options="{'color_field': 'color'}" />
+                                        <field name="technical_skill" nolabel="1"
+                                            widget="many2many_tags"
+                                            options="{'color_field': 'color'}" />
                                         <label for="project" string="Project"></label>
                                         <field name="project" nolabel="1" />
                                         <label for="ssc" string="S.S.C"></label>
@@ -159,33 +162,20 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Other Activites Add"  attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
+                            <page string="Other Activites Add"
+                                attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
                                 <field name="description"
                                     placeholder="More Activites Details"></field>
                             </page>
-                            <page string="Apply"  attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
+                            <page string="Apply"
+                                attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
                                 <field name="apply_company">
                                     <tree>
                                         <field name="c_name_id" />
                                         <field name="s_name_id" />
                                         <field name="status" />
                                     </tree>
-                                    </field>
-                            </page>
-                        </notebook>
-                        <notebook>
-                            <page string="Send Message">
-                                <input type="text" id="fname" name="fname"
-                                    style="height:100px;width:1000px;margin-left:11px"
-                                    placeholder="Send Message"></input>
-                                <button type="submit" name="send" value="Submit" style="margin:46px">
-                                    SEND</button>
-                            </page>
-                            <page string="Log Note">
-                                <hr></hr>
-                                <p></p>
-                            </page>
-                            <page string="Archive">
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
@@ -203,14 +193,14 @@
             <field name="model">student.student</field>
             <field name="arch" type="xml">
                 <search string="demo">
-                     <field name="name" string="Name" />
-                     <filter name="name_of_the_filter" string="Placement Student"
+                    <field name="name" string="Name" />
+                    <filter name="name_of_the_filter" string="Placement Student"
                         domain="[('Career_option', '=', 'placement')]" />
-                      <filter name="name_of_the_filter" string="Higher Education Student"
+                    <filter name="name_of_the_filter" string="Higher Education Student"
                         domain="[('Career_option', '=', 'higher_education')]" />
-                         <filter string="S.S.C Above 75" name="ssc"
+                    <filter string="S.S.C Above 75" name="ssc"
                         domain="[('ssc', '>=', '75')]" />
-                        <filter string="Backlog Student" name="n_backlog"
+                    <filter string="Backlog Student" name="n_backlog"
                         domain="[('n_backlog', '>', '0')]" />
                 </search>
             </field>
