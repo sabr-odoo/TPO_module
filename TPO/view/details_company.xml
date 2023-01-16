@@ -79,7 +79,8 @@
                             <page string="Student List">
                                 <field name="student_select">
                                     <tree decoration-success="status == 'selected'"
-                                        decoration-danger="status=='not_selected'">
+                                        decoration-danger="status=='not_selected'"
+                                        decoration-bf="status=='on_process'">
                                         <field name="c_name_id" />
                                         <field name="s_name_id" />
                                         <button name="action_selected" type="object"

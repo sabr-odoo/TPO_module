@@ -13,14 +13,12 @@
                 <tree>
                     <field name="name" />
                     <field name="department_teacher" />
-                    <!--  <field name="student_nameid"/>  -->
+
                     <field name="offeres_ids" />
                     <field name="student_count" />
                     <field name="from_date" />
                     <field name="subject_name" />
-                    <!-- <field name="company_ids"/>
-                    <field
-                    name="company_count"/> -->
+
                 </tree>
             </field>
         </record>
@@ -35,11 +33,7 @@
                                 class="oe_stat_button" icon="fa-info ">
                                 <field name="student_count" widget="statinfo" string="Student Info" />
                             </button>
-                            <!-- <button name="%(Create_deatils_Under_Company_menu)d" type="action"
-                            class="oe_stat_button" icon="fa-info ">
-                                <field
-                            name="company_count" widget="statinfo" string="Company Info" />
-                            </button> -->
+
                         </div>
                         <group>
                             <group>
@@ -68,7 +62,7 @@
                                     </group>
                                     <group>
                                         <label for="subject_name" string="Subject Name"></label>
-                                        <field name="subject_name" nolabel="1"/>
+                                        <field name="subject_name" nolabel="1" />
                                     </group>
                                 </group>
                             </page>

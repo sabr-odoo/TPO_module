@@ -24,6 +24,8 @@ class StudentStudent(models.Model):
     hsc = fields.Integer()
     cgpa = fields.Integer(string="CGPA", compute="_compute_CGPA_count")
     n_backlog = fields.Integer()
+    institution_name_id =fields.Many2one(
+        'res.users', string="Institution Name")
     branch = fields.Selection(
         selection=[('mca', 'MCA'), ('information_technology', 'Information Technology'),
                    ('computer', 'Computer'), ('mechanical', 'Mechanical')]
@@ -59,6 +61,7 @@ class StudentStudent(models.Model):
     technical_skill = fields.Many2many('technical.skills')
     intership = fields.Text()
     project = fields.Text()
+    active = fields.Boolean(default=True)
     apply_company = fields.One2many('apply.application', 's_name_id')
 
     @api.depends('onesem', 'secondsem', 'thirdsem', 'foursem', 'fivesem', 'sixsem')

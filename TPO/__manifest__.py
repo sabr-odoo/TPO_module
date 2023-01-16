@@ -9,6 +9,7 @@
        'view/tpo_propert_view.xml',
         'view/student_student.xml',
         'view/details_company.xml',
+        'view/res_user_view.xml',
         'view/technical_skills_views.xml',
         'view/apply_to_College_view.xml',
         'view/tpo_property_menu.xml',
