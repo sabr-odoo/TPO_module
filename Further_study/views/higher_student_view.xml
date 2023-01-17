@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record id="Create_higher_student_list_menu" model="ir.actions.act_window">
+            <field name="name">Student List</field>
+            <field name="res_model">higher.study</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="field_add_Student_list" model="ir.ui.view">
+            <field name="name">student List Form View</field>
+            <field name="model">higher.study</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+        <record id="design_form_Student_List" model="ir.ui.view">
+            <field name="name">student List Form View</field>
+            <field name="model">higher.study</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="name" />
+                        <!-- <page>
+                        <field name="higher_studentids">
+                            <tree>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                        </page> -->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

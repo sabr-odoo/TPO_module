@@ -4,7 +4,7 @@
     'author' : "Sanket Brahmbhatt(sabr)",
     'summary' : "Build a training and placement opeartion",
     'version' : '1.0' ,
-    'depends' : ['mail'],
+    'depends' : ['mail','Further_study'],
     'data' : [
        'view/tpo_propert_view.xml',
         'view/student_student.xml',

@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <menuitem id="menu_root" name="Further Study">
+            <!--  First Placement Menu -->
+            <menuitem id="Further_Student_List_first_level_menu" name="Further Student List">
+                <menuitem id="teacher_model_menu_action"
+                    action="Create_higher_student_list_menu" />
+                <menuitem id="student_model_menu_action"
+                    action="Create_Application_Under_student_menu_1" />
+            </menuitem>
+
+
+        </menuitem>
+    </data>
+</odoo>

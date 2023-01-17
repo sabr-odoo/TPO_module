@@ -69,11 +69,6 @@
                         </notebook>
                     </sheet>
                 </form>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" />
-                    <field name="message_ids" />
-                    <field name="activity_ids" />
-                </div>
             </field>
         </record>
         <!--  search engine for , search,filer and  group   -->
