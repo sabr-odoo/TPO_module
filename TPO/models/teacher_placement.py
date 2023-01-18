@@ -7,7 +7,11 @@ class sa(models.Model):
     _name = "teacher.placement"
     _description = "Placement information about teacher"
     _inherit = ["mail.thread", "mail.activity.mixin"]
+    _inherits = {
+        'student.student': 'student_student_id'
+    }
 
+    student_student_id = fields.Many2one('student.student')
     name = fields.Char()
     department_teacher = fields.Selection(
         selection=[('mca', 'MCA'), ('information_technology', 'Information Technology'),

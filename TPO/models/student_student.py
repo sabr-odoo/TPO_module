@@ -11,6 +11,7 @@ class StudentStudent(models.Model):
 
     name = fields.Char()
     Student_id = fields.Many2one('teacher.placement', string="Student ID")
+    # student_student_id =fields.Many2one('student.student')
     DOB = fields.Date()
     age = fields.Integer()
     number = fields.Char()
@@ -64,12 +65,17 @@ class StudentStudent(models.Model):
     active = fields.Boolean(default=True)
     apply_company = fields.One2many('apply.application', 's_name_id')
 
+        
+        
     @api.depends('onesem', 'secondsem', 'thirdsem', 'foursem', 'fivesem', 'sixsem')
     def _compute_CGPA_count(self):
         for record in self:
             num = record.onesem + record.secondsem + record.thirdsem + \
                 record.foursem + record.fivesem + record.sixsem
             record.cgpa = num / 6
+    
+    # def get_name(self):
+    #     return self.name
 
     # @api.depends('apply_company')
     # def _compute_career_student(self):

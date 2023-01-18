@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="create_selected_student_list_menu" model="ir.actions.act_window">
+            <field name="name">selected student</field>
+            <field name="res_model">selected.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="selected_student_form_view" model="ir.ui.view">
+            <field name="name">selected student </field>
+            <field name="model">selected.student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="abc" />
+                    <fiedl name="maker" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="form_design_selected_student_form" model="ir.ui.view">
+            <field name="name">selected student</field>
+            <field name="model">selected.student</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="abc" />
+                        <fiedl name="maker" />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>    

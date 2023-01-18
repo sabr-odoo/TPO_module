@@ -14,7 +14,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name" />
-                    <field name="Student_id" />
+                    <field name="Student_id" optional='hide' />
                     <field name="DOB" optional='hide' />
                     <field name="age" optional='hide' />
                     <field name="number" optional='hide' />
@@ -35,9 +35,7 @@
                     <field name="linkedin" optional='hide' />
                     <field name="github" optional='hide' />
                     <field name="skill" optional='hide' />
-                    <field name="active" />
-                    <field name="technical_skill" widget="many2many_tags"
-                        options="{'color_field': 'color'}" />
+                    <field name="active" optional='hide' />
                     <field name="intership" optional='hide' />
                     <field name="project" optional='hide' />
                     <field name="onesem" optional='hide' />
@@ -49,7 +47,9 @@
                     <field name="description" optional='hide' />
                     <field name="teacher_placement_id" />
                     <field name="apply_company" />
-                    <field name="company_placement_id" />
+                    <field name="company_placement_id" optional='hide' />
+                    <field name="technical_skill" widget="many2many_tags"
+                        options="{'color_field': 'color'}" />
                 </tree>
             </field>
         </record>
@@ -61,9 +61,10 @@
                 <form>
                     <header>
                         <!-- <widget name="web_ribbon" title="Selected" bg_color="bg-success"
-                            attrs="{'invisible':[('active', '=', True)]}" />
-                        <widget name="web_ribbon" title="On Process" bg_color="bg-success"
-                            attrs="{'invisible':[('active', '=', True)]}" />     -->
+                        attrs="{'invisible':[('active', '=', True)]}" />
+                        <widget
+                        name="web_ribbon" title="On Process" bg_color="bg-success"
+                        attrs="{'invisible':[('active', '=', True)]}" />     -->
                         <field name="state" widget="statusbar" options="{'clickable':'1'}" />
                     </header>
                     <sheet>
@@ -100,8 +101,10 @@
                                 <field name="state" nolabel="1" />
                                 <label for="branch" string="Branch"></label>
                                 <field name="branch" nolabel="1" />
-                                <!-- <label for="company_placement_id" string="Select Company"></label>
-                                <field name="company_placement_id" nolabel="1" /> -->
+                                <!-- <label for="company_placement_id" string="Select
+                                Company"></label>
+                                <field
+                                name="company_placement_id" nolabel="1" /> -->
                             </group>
                         </group>
                         <notebook>
@@ -176,12 +179,15 @@
                             <page string="Apply"
                                 attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
                                 <field name="apply_company">
-                                    <tree decoration-success="status == 'selected'"
-                                    decoration-danger="status=='not_selected'"
-                                    decoration-bf="status=='on_process'">
+                                    <tree expand="1" editable="top"
+                                        decoration-success="status == 'selected'"
+                                        decoration-danger="status=='not_selected'"
+                                        decoration-bf="status=='on_process'">
                                         <field name="c_name_id" />
-                                        <field name="s_name_id" />
+                                        <!-- <field name="s_name_id" /> -->
+                                        <field name="student_name_id" invisible="1" />
                                         <field name="status" />
+                        
                                     </tree>
                                 </field>
                             </page>

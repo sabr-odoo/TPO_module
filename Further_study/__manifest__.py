@@ -7,7 +7,7 @@
     'depends' : ['mail'], 
     'data' : [
         'views/higher_student_view.xml',
-        'views/student_student_view.xml',
+        # 'views/student_student_view.xml',
         'views/further_student_menu.xml',
         'security/ir.model.access.csv',
      ],

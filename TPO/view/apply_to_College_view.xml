@@ -15,8 +15,10 @@
                 <tree>
                     <field name="c_name_id" string="Company Name" />
                     <field name="s_name_id" string="Student Name" />
+                    <field name="student_name_id" />
                     <field name="add_some" optional="hide" />
                     <field name="select_apply" optional="hide" />
+                    <field name="email" />
                 </tree>
             </field>
         </record>
@@ -39,6 +41,7 @@
                                 <field name="add_some" nolabel="1" />
                                 <label for="select_apply" string="Profile applied for:"></label>
                                 <field name="select_apply" nolabel="1" />
+                                <field name="email" />
                             </group>
                         </group>
                     </sheet>

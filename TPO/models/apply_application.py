@@ -7,11 +7,13 @@ from odoo.exceptions import ValidationError,UserError
 class applyApplication(models.Model):
     _name = "apply.application"
     _description = "student can apply selected company"
-    _inherit = ["mail.thread", "mail.activity.mixin"]
+    _inherit = "student.student"
+ 
 
-    c_name_id = fields.Many2one('details.company')
+    c_name_id = fields.Many2one('details.company',string="Company Name")
     s_name_id = fields.Many2one('student.student' )
     te_name_id = fields.Many2one('teacher.placement')
+    student_name_id = fields.One2many('student.student','name',string ='Student Name')
     add_some = fields.Text()
     select_apply = fields.Selection(
         selection=[('software_developer', 'Software Developer'),
