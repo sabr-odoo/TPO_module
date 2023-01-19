@@ -3,7 +3,7 @@
 <odoo>
     <data>
         <!-- application Form  Menu under student -->
-      
+
         <record id="application_view_design_form" model="ir.ui.view">
             <field name="name">application Form View</field>
             <field name="model">student.student</field>
@@ -11,6 +11,7 @@
                 <tree>
                     <field name="name" />
                     <field name="Student_id" optional='hide' />
+                    <field name="image_student" optional='hide' />
                     <field name="DOB" optional='hide' />
                     <field name="age" optional='hide' />
                     <field name="number" optional='hide' />
@@ -64,6 +65,8 @@
                         <field name="state" widget="statusbar" options="{'clickable':'1'}" />
                     </header>
                     <sheet>
+                        <field name="image_student" widget="image" class="oe_avatar"
+                            options="{&quot;preview_image&quot;: &quot;image_128&quot;, &quot;size&quot;: [120, 120]}" />
 
                         <group>
                             <group>
@@ -183,7 +186,6 @@
                                         <!-- <field name="s_name_id" /> -->
                                         <field name="student_name_id" invisible="1" />
                                         <field name="status" />
-                        
                                     </tree>
                                 </field>
                             </page>
@@ -192,6 +194,33 @@
                 </form>
             </field>
         </record>
+
+        <record id="student_student_kanban_view" model="ir.ui.view">
+            <field name="name">student.student.kanban</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id" />
+                    <field name="image_student" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img alt="Avatar"
+                                        t-att-src="kanban_image('student.student', 'image_student   ',record.id.raw_value)" />
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name" />
+                                    </strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
 
         <record id="student_student__search" model="ir.ui.view">
             <field name="name">student.student.search</field>
@@ -207,6 +236,9 @@
                         domain="[('ssc', '>=', '75')]" />
                     <filter string="Backlog Student" name="n_backlog"
                         domain="[('n_backlog', '>', '0')]" />
+                    <searchpanel>
+                        <field name="state" icon="fa-users" enable_counters="1" string="Name" />
+                    </searchpanel>
                 </search>
             </field>
         </record>

@@ -11,6 +11,7 @@ class StudentStudent(models.Model):
 
     name = fields.Char()
     Student_id = fields.Many2one('teacher.placement', string="Student ID")
+    image_student = fields.Image(string="Image")
     # student_student_id =fields.Many2one('student.student')
     DOB = fields.Date()
     age = fields.Integer()
