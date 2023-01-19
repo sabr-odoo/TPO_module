@@ -15,8 +15,6 @@
             <menuitem id="Student_first_level_menu" name="Student">
                 <menuitem id="application_model_menu_action"
                     action="Create_Application_Under_student_menu" />
-                <!-- <menuitem id="resume_model_menu_action"
-                action="Create_resume_Under_student_menu" /> -->
             </menuitem>
             <!-- Third Company Menu-->
             <menuitem id="company_first_level_menu" name="Company">

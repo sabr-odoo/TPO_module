@@ -3,11 +3,7 @@
 <odoo>
     <data>
         <!-- application Form  Menu under student -->
-        <record id="Create_Application_Under_student_menu" model="ir.actions.act_window">
-            <field name="name">Application Form</field>
-            <field name="res_model">student.student</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+      
         <record id="application_view_design_form" model="ir.ui.view">
             <field name="name">application Form View</field>
             <field name="model">student.student</field>
@@ -194,11 +190,6 @@
                         </notebook>
                     </sheet>
                 </form>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" />
-                    <field name="message_ids" />
-                    <field name="activity_ids" />
-                </div>
             </field>
         </record>
 

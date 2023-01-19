@@ -2,11 +2,6 @@
 
 <odoo>
     <data>
-        <record id="Create_apply_application_Under_apply_menu" model="ir.actions.act_window">
-            <field name="name">Apply To College</field>
-            <field name="res_model">apply.application</field>
-            <field name="view_mode">tree,form</field>
-        </record>
 
         <record id="appl_application_form_view" model="ir.ui.view">
             <field name="name">apply form view</field>

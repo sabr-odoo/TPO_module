@@ -3,11 +3,6 @@
 <odoo>
     <data>
         <!-- Company Deatils  Menu under Company -->
-        <record id="Create_deatils_Under_Company_menu" model="ir.actions.act_window">
-            <field name="name">Company Deatils</field>
-            <field name="res_model">details.company</field>
-            <field name="view_mode">tree,form</field>
-        </record>
 
         <record id="company_deatils_form_view" model="ir.ui.view">
             <field name="name">Company form view</field>
@@ -106,11 +101,6 @@
                         </notebook>
                     </sheet>
                 </form>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" />
-                    <field name="message_ids" />
-                    <field name="activity_ids" />
-                </div>
             </field>
         </record>
 

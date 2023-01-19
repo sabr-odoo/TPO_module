@@ -2,11 +2,7 @@
 
 <odoo>
     <data>
-        <record id="create_selected_student_list_menu" model="ir.actions.act_window">
-            <field name="name">selected student</field>
-            <field name="res_model">selected.student</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+       
 
         <record id="selected_student_form_view" model="ir.ui.view">
             <field name="name">selected student </field>

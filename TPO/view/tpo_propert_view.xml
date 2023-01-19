@@ -1,11 +1,6 @@
 <odoo>
     <data>
-        <!--  Tecaher Menu under Placement -->
-        <record id="Create_teacher_Under_placement_menu" model="ir.actions.act_window">
-            <field name="name">Teacher</field>
-            <field name="res_model">teacher.placement</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+       
         <record id="field_add_teacher_placement" model="ir.ui.view">
             <field name="name">Teacher Form View</field>
             <field name="model">teacher.placement</field>
@@ -81,11 +76,6 @@
                 <search string="demo"> </search>
             </field>
         </record>
-        <!--  Student Menu under Placement -->
-        <record id="Create_student_Under_placement_menu" model="ir.actions.act_window">
-            <field name="name">Student</field>
-            <field name="res_model">student.placement</field>
-            <field name="view_mode">tree,form</field>
-        </record>
+       
     </data>
 </odoo>
