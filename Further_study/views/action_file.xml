@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="Create_higher_student_list_menu" model="ir.actions.act_window">
+            <field name="name">Student List</field>
+            <field name="res_model">higher.study</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
+        

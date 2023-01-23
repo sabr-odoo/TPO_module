@@ -1,16 +1,14 @@
 <odoo>
     <data>
-        <record id="Create_higher_student_list_menu" model="ir.actions.act_window">
-            <field name="name">Student List</field>
-            <field name="res_model">higher.study</field>
-            <field name="view_mode">tree,form</field>
-        </record>
         <record id="field_add_Student_list" model="ir.ui.view">
             <field name="name">student List Form View</field>
             <field name="model">higher.study</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="name" />
+                    <field name="career" />
+                    <field name="teacher_name" />
+                    <!-- <field name="country_id" /> -->
                 </tree>
             </field>
         </record>
@@ -20,14 +18,15 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <field name="name" />
-                        <!-- <page>
-                        <field name="higher_studentids">
-                            <tree>
-                                <field name="name"/>
-                            </tree>
-                        </field>
-                        </page> -->
+                        <label for="name" string="Name"></label>
+                        <field name="name" nolabel="1" />
+                        <label for="career" string="Placement Student"></label>
+                        <field name="career" nolabel="1" />
+                        <label for="teacher_name" string="Teacher Name"></label>
+                        <field name="teacher_name" />
+                        <!-- <label for="country_id" string="Country Name"></label>
+                        <field name="country_id"  nolabel="1" /> -->
+                        
                     </sheet>
                 </form>
             </field>

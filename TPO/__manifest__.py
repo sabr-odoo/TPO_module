@@ -16,10 +16,10 @@
         'view/apply_to_College_view.xml',
         'view/tpo_property_menu.xml',
     ],
+    'demo': [
+        'demo/student_student_demo.xml',
+    ],
     'application': True,
     'installable': True,
     'license': 'LGPL-3',
-    # 'demo': [
-    #    'demo/demo_student_student.xml',
-    # ],
 }

@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record id="student_student_demo" model="student.student">
+            <field name="name">The Laurels</field>
+        </record>
+    </data>
+</odoo>

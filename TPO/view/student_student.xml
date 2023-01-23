@@ -62,7 +62,8 @@
                         <widget
                         name="web_ribbon" title="On Process" bg_color="bg-success"
                         attrs="{'invisible':[('active', '=', True)]}" />     -->
-                        <field name="state" widget="statusbar" options="{'clickable':'1'}" />
+                        <button name="action_abroad" type="object" string="Abroad Student"></button>
+                        <field name="state" widget="statusbar" options="{'clickable':'1'}"  invisible="1" />
                     </header>
                     <sheet>
                         <field name="image_student" widget="image" class="oe_avatar"
