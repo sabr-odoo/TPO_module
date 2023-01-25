@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <odoo>
     <data>
         <!-- application Form  Menu under student -->
@@ -44,6 +43,8 @@
                     <field name="description" optional='hide' />
                     <field name="teacher_placement_id" />
                     <field name="apply_company" />
+                    <!-- <field name="currency_id" />
+                    <field name="fees" /> -->
                     <field name="company_placement_id" optional='hide' />
                     <field name="technical_skill" widget="many2many_tags"
                         options="{'color_field': 'color'}" />
@@ -63,7 +64,8 @@
                         name="web_ribbon" title="On Process" bg_color="bg-success"
                         attrs="{'invisible':[('active', '=', True)]}" />     -->
                         <button name="action_abroad" type="object" string="Abroad Student"></button>
-                        <field name="state" widget="statusbar" options="{'clickable':'1'}"  invisible="1" />
+                        <field name="state" widget="statusbar" options="{'clickable':'1'}"
+                            invisible="1" />
                     </header>
                     <sheet>
                         <field name="image_student" widget="image" class="oe_avatar"
@@ -108,6 +110,8 @@
                             </group>
                         </group>
                         <notebook>
+    
+                               
                             <page string="Career">
                                 <group>
                                     <group>
@@ -174,7 +178,7 @@
                             <page string="Other Activites Add"
                                 attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
                                 <field name="description"
-                                    placeholder="More Activites Details"></field>
+                                    placeholder="More Activites Details" widget="html"></field>
                             </page>
                             <page string="Apply"
                                 attrs="{'invisible':[('Career_option', '!=', 'placement')]}">
@@ -190,6 +194,7 @@
                                     </tree>
                                 </field>
                             </page>
+
                         </notebook>
                     </sheet>
                 </form>
@@ -200,19 +205,24 @@
             <field name="name">student.student.kanban</field>
             <field name="model">student.student</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban default_group_by="Career_option">
                     <field name="id" />
                     <field name="image_student" />
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
                                 <div class="o_kanban_image">
-                                    <img alt="Avatar"
-                                        t-att-src="kanban_image('student.student', 'image_student   ',record.id.raw_value)" />
+                                    <!-- <img alt="Avatar"
+                                    t-att-src="kanban_image('student.student', 'image_student
+                                    ',record.id.raw_value)" /> -->
+                                    <field name="image_student" widget="image"
+                                        class="oe_right oe_avatar" />
                                 </div>
                                 <div class="oe_kanban_details">
                                     <strong class="o_kanban_record_title">
-                                        <field name="name" />
+                                        <h2>
+                                            <field name="name" />
+                                        </h2>
                                     </strong>
                                 </div>
                             </div>
@@ -235,11 +245,14 @@
                         domain="[('Career_option', '=', 'higher_education')]" />
                     <filter string="S.S.C Above 75" name="ssc"
                         domain="[('ssc', '>=', '75')]" />
+                    <filter name="group_Career_option_id" string="My Task"
+                        context="{'group_by':'Career_option'}" />
                     <filter string="Backlog Student" name="n_backlog"
                         domain="[('n_backlog', '>', '0')]" />
-                    <searchpanel>
-                        <field name="state" icon="fa-users" enable_counters="1" string="Name" />
-                    </searchpanel>
+                    <!-- <searchpanel>
+                        <field name="state" icon="fa-users"
+                    enable_counters="1" string="Name" />
+                    </searchpanel> -->
                 </search>
             </field>
         </record>
