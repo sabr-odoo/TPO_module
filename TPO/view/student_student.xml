@@ -43,8 +43,6 @@
                     <field name="description" optional='hide' />
                     <field name="teacher_placement_id" />
                     <field name="apply_company" />
-                    <!-- <field name="currency_id" />
-                    <field name="fees" /> -->
                     <field name="company_placement_id" optional='hide' />
                     <field name="technical_skill" widget="many2many_tags"
                         options="{'color_field': 'color'}" />
@@ -64,6 +62,7 @@
                         name="web_ribbon" title="On Process" bg_color="bg-success"
                         attrs="{'invisible':[('active', '=', True)]}" />     -->
                         <button name="action_abroad" type="object" string="Abroad Student"></button>
+                        <!-- <button name="print_report" type="object" string="Print" class="oe_highlight"></button> -->
                         <field name="state" widget="statusbar" options="{'clickable':'1'}"
                             invisible="1" />
                     </header>
@@ -110,8 +109,15 @@
                             </group>
                         </group>
                         <notebook>
-    
-                               
+                            <page string="Fees">
+                                <field name="company_id" />
+                                <label for="currency_id" string="currency_id"></label> 
+                                <field name="currency_id" nolabel="1" />
+                                <field name="fee" widget='monetary' />
+                                <field name="usa" />
+                                <field name="ind" />
+                            </page>
+
                             <page string="Career">
                                 <group>
                                     <group>
@@ -224,6 +230,16 @@
                                             <field name="name" />
                                         </h2>
                                     </strong>
+                                    <div>
+                                        <b>Faculty CO:-<field name="teacher_placement_id" />
+                                        </b>
+                                        <b style="padding:50px;">
+                                            <br />
+
+                                            <field name="branch" />
+
+                                        </b>
+                                    </div>
                                 </div>
                             </div>
                         </t>
@@ -247,11 +263,15 @@
                         domain="[('ssc', '>=', '75')]" />
                     <filter name="group_Career_option_id" string="My Task"
                         context="{'group_by':'Career_option'}" />
+                    <filter name="group_branch_option_id" string="Department"
+                        context="{'group_by':'branch'}" />
+                    <filter name="group_Teacher_option_id" string="Teacher"
+                        context="{'group_by':'teacher_placement_id'}" />
                     <filter string="Backlog Student" name="n_backlog"
                         domain="[('n_backlog', '>', '0')]" />
                     <!-- <searchpanel>
                         <field name="state" icon="fa-users"
-                    enable_counters="1" string="Name" />
+                    enable_counters="1" st>ring="Name" />
                     </searchpanel> -->
                 </search>
             </field>

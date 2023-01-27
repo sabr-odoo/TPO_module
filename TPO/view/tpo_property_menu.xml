@@ -27,6 +27,8 @@
             <menuitem id="apply_application_first_level_menu" name="Apply">
                 <menuitem id="apply_application_form_model_menu_action"
                     action="Create_apply_application_Under_apply_menu" />
+                <menuitem id="report_form_model_menu_action"
+                    action="create_report_menu" />
 
             </menuitem>
 

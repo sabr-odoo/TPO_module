@@ -7,7 +7,7 @@ from odoo.exceptions import ValidationError, UserError
 class StudentStudent(models.Model):
     _name = "student.student"
     _description = "Student of application form"
-    _inherit = ["mail.thread", "mail.activity.mixin"]
+    _inherit = ["mail.thread", "mail.activity.mixin", "res.currency.rate"]
 
     name = fields.Char()
     Student_id = fields.Many2one('teacher.placement', string="Student ID")
@@ -66,6 +66,24 @@ class StudentStudent(models.Model):
     active = fields.Boolean(default=True)
     apply_company = fields.One2many('apply.application', 's_name_id')
 
+    # currency_id = fields.Many2one('res.currency', string="Entry Fee")
+    company_id = fields.Many2one(
+        'res.company', default=lambda self: self.env.company.id)
+    currency_id = fields.Many2one(
+        'res.currency', related='company_id.currency_id', readonly=True, store=True)
+    fee = fields.Monetary(string="Fee")
+    usa = fields.Float(string="USA")
+    ind = fields.Float(string="IND")
+
+    # @api.model
+    # def _get_conversion_rate(self):
+    #     currency_rates = (
+    #         self.usa + self.ind)._get_rates(self.company, self.date)
+    #     res = currency_rates.get(self.ind.id) / \
+    #         currency_rates.get(self.usa.id)
+    #     return res
+    
+  
     @api.depends('onesem', 'secondsem', 'thirdsem', 'foursem', 'fivesem', 'sixsem')
     def _compute_CGPA_count(self):
         for record in self:
@@ -75,11 +93,10 @@ class StudentStudent(models.Model):
 
     def action_abroad(self):
         for record in self:
-                self.env['higher.study'].create(
-                    {
-                        'name': record.name,
-                        'career': record.Career_option,
-                        'teacher_name':record.teacher_placement_id,
-                    },
-                )
-
+            self.env['higher.study'].create(
+                {
+                    'name': record.name,
+                    'career': record.Career_option,
+                    'teacher_name': record.teacher_placement_id,
+                },
+            )
