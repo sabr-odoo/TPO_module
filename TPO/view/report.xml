@@ -6,9 +6,8 @@
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">TPO.report_student</field>
             <field name="report_file">TPO.report_student</field>
-
+           
+            
         </record>
-
-
     </data>
 </odoo>

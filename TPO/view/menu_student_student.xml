@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <template id="student">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure" />
+                <div class="oe_structure">
+                    <div class="container">
+                        <p>
+                            <t t-foreach="students" t-as="student">
+                                <p>
+                                    <a t-attf-href="/exam/{{ slug(student) }}">
+                                        <t t-esc="student.name" />
+                                    </a>
+                                </p>
+                            </t>
+                        </p>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="student_data_link">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <h3>
+                            <t t-esc="student_data.name" />
+                        </h3>
+                    </div>
+                </div>
+            </t>
+
+        </template>
+    </data>
+</odoo>

@@ -10,3 +10,4 @@ from . import apply_application
 from . import technical_skills
 from . import res_user
 from . import Selected_student
+from . import tpo_name

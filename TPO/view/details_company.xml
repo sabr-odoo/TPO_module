@@ -44,7 +44,7 @@
                                 <label for="working_mode" string="Work Mode"></label>
                                 <field name="working_mode" nolabel="1" />
                                 <label for="experience" string="Experience"></label>
-                                <field name="experience" nolabel="1" />
+                                <field name="experience" nolabel="1" groups="TPO.tpo_mange_company" />
                                 <label for="position" string="Position"></label>
                                 <field name="position" nolabel="1" />
                                 <label for="langauge" string="Langauge"></label>
@@ -76,7 +76,7 @@
                                     <tree decoration-success="status == 'selected'"
                                         decoration-danger="status=='not_selected'"
                                         decoration-bf="status=='on_process'">
-                                        <field name="c_name_id" invisible="1" />
+                                        <field name="c_name_id" invisible="1"  />
                                         <field name="s_name_id"  string="Student Name"/>
                                         <button name="action_selected" type="object"
                                             string="SELECTED"

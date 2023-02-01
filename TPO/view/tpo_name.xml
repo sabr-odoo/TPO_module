@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="tpo_name_form_view" model="ir.ui.view">
+            <field name="name">tpo Name</field>
+            <field name="model">tpo.name</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="age" />
+                    <field name="number" />
+                    <field name="email" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="tpo_name_design" model="ir.ui.view">
+            <field name="name">tpo Name</field>
+            <field name="model">tpo.name</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <label for="name" string="Name" />
+                        <field name="name" nolabel="1"/>
+                        <field name="age" />
+                        <field name="number" />
+                        <field name="email" />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

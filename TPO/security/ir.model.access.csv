@@ -8,3 +8,4 @@ TPO.access_details_company,access_details_company,TPO.model_details_company,base
 TPO.access_apply_application,access_apply_application,TPO.model_apply_application,base.group_user,1,1,1,1
 TPO.access_technical_skills,access_technical_skills,TPO.model_technical_skills,base.group_user,1,1,1,1
 TPO.access_selected_student,access_selected_student,TPO.model_selected_student,base.group_user,1,1,1,1
+TPO.access_tpo_name,access_tpo_name,TPO.model_tpo_name,,1,0,0,0

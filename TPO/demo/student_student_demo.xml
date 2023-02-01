@@ -3,5 +3,11 @@
         <record id="student_student_demo" model="student.student">
             <field name="name">The Laurels</field>
         </record>
+        <record id="student_student_demo_data" model="student.student">
+            <field name="name">The Taj hotel</field>
+        </record>
+        <record id="student_student_demo_data_2" model="student.student">
+            <field name="name">The Taj </field>
+        </record>
     </data>
 </odoo>

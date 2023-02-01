@@ -7,7 +7,7 @@ from odoo.exceptions import ValidationError, UserError
 class StudentStudent(models.Model):
     _name = "student.student"
     _description = "Student of application form"
-    _inherit = ["mail.thread", "mail.activity.mixin", "res.currency.rate"]
+    _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char()
     Student_id = fields.Many2one('teacher.placement', string="Student ID")
@@ -66,14 +66,6 @@ class StudentStudent(models.Model):
     active = fields.Boolean(default=True)
     apply_company = fields.One2many('apply.application', 's_name_id')
 
-    # currency_id = fields.Many2one('res.currency', string="Entry Fee")
-    company_id = fields.Many2one(
-        'res.company', default=lambda self: self.env.company.id)
-    currency_id = fields.Many2one(
-        'res.currency', related='company_id.currency_id', readonly=True, store=True)
-    fee = fields.Monetary(string="Fee")
-    usa = fields.Float(string="USA")
-    ind = fields.Float(string="IND")
 
     # @api.model
     # def _get_conversion_rate(self):

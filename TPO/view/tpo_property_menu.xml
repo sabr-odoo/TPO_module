@@ -5,7 +5,9 @@
 
         <menuitem id="menu_root" name="TPO" web_icon="TPO,static/description/icon.png">
             <!-- First Placement Menu-->
-            <menuitem id="Placement_first_level_menu" name="Placement">
+            <!-- groups="TPO.tpo_mange_teacher" -->
+            <menuitem id="Placement_first_level_menu" name="Placement"
+                groups="TPO.tpo_mange_teacher">
                 <menuitem id="teacher_model_menu_action"
                     action="Create_teacher_Under_placement_menu" />
                 <menuitem id="student_model_menu_action"
@@ -32,6 +34,12 @@
 
             </menuitem>
 
+
+            <!-- five website for Student Menu-->
+            <menuitem id="Student_five_level_menu" name="Website">
+                <menuitem id="website_model_menu_action"
+                    action="create_tpo_name_menu" />
+            </menuitem>
         </menuitem>
     </data>
 </odoo>

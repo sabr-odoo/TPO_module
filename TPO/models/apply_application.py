@@ -6,8 +6,7 @@ from odoo.exceptions import ValidationError,UserError
 
 class applyApplication(models.Model):
     _name = "apply.application"
-    _description = "student can apply selected company"
-    _inherit = "student.student"
+    _description = "student can apply selected compan"
  
 
     c_name_id = fields.Many2one('details.company',string="Company Name")

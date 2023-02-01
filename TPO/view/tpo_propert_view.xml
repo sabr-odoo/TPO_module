@@ -51,7 +51,7 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Session Time">
+                            <!-- <page string="Session Time">
                                 <group>
                                     <group>
                                         <label for="from_date" string="Time"></label>
@@ -62,7 +62,7 @@
                                         <field name="subject_name" nolabel="1" />
                                     </group>
                                 </group>
-                            </page>
+                            </page> -->
                         </notebook>
                     </sheet>
                 </form>

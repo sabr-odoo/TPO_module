@@ -15,7 +15,7 @@
                     <field name="age" optional='hide' />
                     <field name="number" optional='hide' />
                     <field name="email" optional='hide' />
-                    <field name="address" optional='hide' />
+                    <!-- <field name="address" optional='hide' /> -->
                     <field name="city" optional='hide' />
                     <field name="institution_name_id" optional='hide' />
                     <field name="state" optional='hide' />
@@ -62,7 +62,8 @@
                         name="web_ribbon" title="On Process" bg_color="bg-success"
                         attrs="{'invisible':[('active', '=', True)]}" />     -->
                         <button name="action_abroad" type="object" string="Abroad Student"></button>
-                        <!-- <button name="print_report" type="object" string="Print" class="oe_highlight"></button> -->
+                        <!-- <button name="print_report" type="object" string="Print"
+                        class="oe_highlight"></button> -->
                         <field name="state" widget="statusbar" options="{'clickable':'1'}"
                             invisible="1" />
                     </header>
@@ -78,8 +79,8 @@
                                 <field name="Student_id" nolabel="1" />
                                 <label for="email" string="Email-ID"></label>
                                 <field name="email" nolabel="1" />
-                                <label for="address" string="Address"></label>
-                                <field name="address" nolabel="1" />
+                                <!-- <label for="address" string="Address"></label> -->
+                                <field name="address" groups="TPO.tpo_user_student" />
                                 <label for="pincode" string="Pincode"></label>
                                 <field name="pincode" nolabel="1" />
                                 <label for="institution_name_id" string="Institution Name"></label>
@@ -109,14 +110,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Fees">
-                                <field name="company_id" />
-                                <label for="currency_id" string="currency_id"></label> 
-                                <field name="currency_id" nolabel="1" />
-                                <field name="fee" widget='monetary' />
-                                <field name="usa" />
-                                <field name="ind" />
-                            </page>
+
 
                             <page string="Career">
                                 <group>
@@ -276,6 +270,25 @@
                 </search>
             </field>
         </record>
+        <!-- <template id="student">
+
+            <t t-foreach="students" t-as="student">
+                <p>
+                    <a t-attf-href="//{{ slug(student) }}">
+                        <t t-esc="student.name" />
+                    </a>
+                </p>
+            </t>
+
+        </template>
+
+        <template id="student_data_link">
+            <div class="container">
+                <h3>
+                    <t t-esc="student_data.name" />
+                </h3>
+            </div>
+        </template> -->
 
 
     </data>

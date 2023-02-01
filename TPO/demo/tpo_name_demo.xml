@@ -1,0 +1,28 @@
+<odoo>
+
+    <record id="padilla" model="tpo.name">
+        <field name="name">Diana Padilla</field>
+        <field name="age">12</field>
+        <field name="number">12345678</field>
+        <field name="email">123@gmail.com</field>
+    </record>
+    <record id="carroll" model="tpo.name">
+        <field name="name">Jody Carroll</field>
+        <field name="age">12</field>
+        <field name="number">12345678</field>
+        <field name="email">123@gmail.com</field>
+    </record>
+    <record id="vaughn" model="tpo.name">
+        <field name="name">Lester Vaughn</field>
+        <field name="age">12</field>
+        <field name="number">12345678</field>
+        <field name="email">123@gmail.com</field>
+    </record>
+    <record id="sanket" model="tpo.name">
+        <field name="name">sanket</field>
+        <field name="age">12</field>
+        <field name="number">12345678</field>
+        <field name="email">123@gmail.com</field>
+    </record>
+
+</odoo>

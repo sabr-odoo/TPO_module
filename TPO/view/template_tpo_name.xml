@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+
+        <template id="student_student_id_data">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure" />
+                <div class="oe_structure">
+                    <div class="container">
+                        <p>
+                            <t t-esc="teacher.name" />
+                            <p>Last modified: <i t-field="teacher.write_date" /></p>
+                            <div>
+                                <t t-esc="teacher.name" />
+                                <t t-esc="teacher.age" />
+                                <t t-esc="teacher.number" />
+                                <t t-esc="teacher.email" />
+                            </div>
+
+                        </p>
+                    </div>
+                </div>
+            </t>
+            <div class="oe_structure" />
+        </template>
+        <template id="index">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="teachers" t-as="teacher">
+                            <h3>
+                                <t t-esc="teacher.id" />
+                                <a t-attf-href="/TPO/{{ slug(teacher) }}">
+                                    <t t-esc="teacher.name" />
+                                </a>
+                            </h3>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="student">
+
+            <t t-foreach="students" t-as="student">
+                <p>
+                    <a t-attf-href="/exam/{{ slug(student) }}">
+                        <t t-esc="student.name" />
+                    </a>
+                </p>
+            </t>
+
+        </template>
+
+        <template id="student_data_link">
+            <p>
+                <h3>
+                    <t t-esc="student_data.name" />
+                </h3>
+            </p>
+        </template>
+    </data>
+</odoo>

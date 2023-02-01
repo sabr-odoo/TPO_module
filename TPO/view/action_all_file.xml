@@ -23,7 +23,7 @@
         <record id="Create_Application_Under_student_menu" model="ir.actions.act_window">
             <field name="name">Application Form</field>
             <field name="res_model">student.student</field>
-            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_mode">tree,kanban,form</field>
         </record>
 
         <record id="Create_technical_skills_model_action" model="ir.actions.act_window">
@@ -49,6 +49,12 @@
         <record id="create_report_menu" model="ir.actions.act_window">
             <field name="name">Report</field>
             <field name="res_model">res.currency</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="create_tpo_name_menu" model="ir.actions.act_window">
+            <field name="name">tpo Name</field>
+            <field name="res_model">tpo.name</field>
             <field name="view_mode">tree,form</field>
         </record>
     </data>
